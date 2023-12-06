@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@base components{
-    Card{
-        @apply bg-white 
-    }
+@base components {
+  * {
+    border: solid red;
+  }
 }
