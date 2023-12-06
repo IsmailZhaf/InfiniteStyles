@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@base components {
-  * {
-    border: solid red;
-  }
+* {
+  border: solid red;
 }
