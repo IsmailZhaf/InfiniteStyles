@@ -20,22 +20,22 @@ export const Header = () => {
   ];
 
   return (
-    <div className="flex justify-between m-7">
+    <div className="flex justify-between mx-[50px] mb-5 ">
       {/* logo */}
       <Image className="mt-7" src={logo} width={250} height={150} />
       {/* menu */}
       <div className="flex gap-4 items-end font-serif">
         {menu.map(({ label, route }, index) => {
           return (
-            <Link href={route} key={index} className="text-[24px] hover:bg-slate-200 hover:rounded-xl p-1">
+            <Link href={route} key={index} className="text-[20px] hover:bg-slate-200 hover:rounded-xl p-1">
               {label}
             </Link>
           );
         })}
       </div>
-      <div className="pt-[50px] text-[20px] space-y-16 flex flex-col justify-between">
+      <div className="pt-[50px] space-y-16 flex flex-col justify-between">
         <div className="flex gap-5">
-          <button className="border-[2px] border-black px-5 rounded text-[15] font-semibold">
+          <button className="border-[2px] border-black px-5 rounded text-[10] font-semibold">
             <Link href={"/Login"}>LOGIN</Link>
           </button>
           <div>

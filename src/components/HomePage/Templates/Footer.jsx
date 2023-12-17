@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/../../public/LOGO.png"
+import logo from "@/../../public/LOGO.png";
 import fb from "@/../../public/logo/fb.png";
 import ig from "@/../../public/logo/ig.png";
 import appstore from "@/../../public/logo/appstore.png";
@@ -16,21 +16,21 @@ export const Footer = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center bg-[#3C4242] h-[1000px] text-white">
-      <div className="flex justify-evenly  mt-[100px] w-[1500px]">
+    <div className="flex flex-col items-center bg-[#3C4242] h-[900px] text-white">
+      <div className="flex justify-evenly mt-[100px] w-full">
         <div className="flex flex-col space-y-[20px]">
-          <h1 className="text-[33px]">SHOP</h1>
+          <h1 className="text-[25px]">SHOP</h1>
           {menu.map(({ label, route }, index) => {
             return (
-              <Link href={route} key={index} className="font-light text-[20px]">
+              <Link href={route} key={index} className="font-light text-[15px]">
                 {label}
               </Link>
             );
           })}
         </div>
         <div className="space-y-[20px]">
-          <h1 className="text-[33px]">Company</h1>
-          <div className="text-[20px] font-light space-y-[20px]">
+          <h1 className="text-[25px]">Company</h1>
+          <div className="text-[15px] font-light space-y-[20px]">
             <h3>Collaboration</h3>
             <h3>About Us</h3>
             <h3>Media</h3>
@@ -38,8 +38,8 @@ export const Footer = () => {
           </div>
         </div>
         <div className=" space-y-[20px]">
-          <h1 className="text-[33px]">More Info</h1>
-          <div className="text-[20px] font-light space-y-[20px]">
+          <h1 className="text-[25px]">More Info</h1>
+          <div className="text-[15px] font-light space-y-[20px]">
             <h3>Term and Condition</h3>
             <h3>Shipping Policy</h3>
             <h3>Privacy Policy</h3>
@@ -47,8 +47,8 @@ export const Footer = () => {
           </div>
         </div>
         <div className=" space-y-[20px]">
-          <h1 className="text-[33px]">Need Help</h1>
-          <div className="text-[20px] font-light space-y-[20px]">
+          <h1 className="text-[25px]">Need Help</h1>
+          <div className="text-[15px] font-light space-y-[20px]">
             <h3>Returns & Refunds</h3>
             <h3>Track Order</h3>
             <h3>Contact Us</h3>
@@ -56,29 +56,29 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex mt-[120px] justify-between items-end w-[1150px]  space-x-20 gap-10">
+      <div className="flex mt-[120px] justify-between items-end w-[1100px]  space-x-15 gap-10">
         <div className="flex gap-5">
-          <Image src={fb} className="w-[50px] h-[50px] bg-white rounded-xl"></Image>
-          <Image src={ig} className="w-[50px] h-[50px] bg-white rounded-xl"></Image>
-          <Image src={twitter} className="w-[50px] h-[50px] bg-white rounded-xl"></Image>
+          <Image src={fb} className="w-[40px] h-[40px] bg-white rounded-xl"></Image>
+          <Image src={ig} className="w-[40px] h-[40px] bg-white rounded-xl"></Image>
+          <Image src={twitter} className="w-[40px] h-[40px] bg-white rounded-xl"></Image>
         </div>
-        <div className="space-y-[50px]">
+        <div className="space-y-[35px]">
           <div>
-            <h1 className="text-[30px] font-semibold">Download The App</h1>
+            <h1 className="text-[25px] font-semibold">Download The App</h1>
           </div>
           <div className="flex gap-5 font-light">
             <div className="flex gap-2">
-              <Image src={playstore} className="w-[30px] h-[40px]"></Image>
+              <Image src={playstore} className="w-[25px] h-[35px]"></Image>
               <div>
-                <h3 className="text-[10px]">Android on</h3>
-                <h1 className="text-[18px]">Google Play</h1>
+                <h3 className="text-[7px]">Android on</h3>
+                <h1 className="text-[14px]">Google Play</h1>
               </div>
             </div>
             <div className="flex gap-2">
-              <Image src={appstore} className="w-[30px] h-[40px]"></Image>
+              <Image src={appstore} className="w-[25px] h-[35px]"></Image>
               <div>
-                <h3 className="text-[10px]">Available on</h3>
-                <h1 className="text-[18px]">App Store</h1>
+                <h3 className="text-[7px]">Available on</h3>
+                <h1 className="text-[14px]">App Store</h1>
               </div>
             </div>
           </div>
