@@ -6,11 +6,11 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <main className="">
+    <main className="justify-center items-center">
       <HomeSection1 />
       <HomeSection2 />
       <HomeSection3 />
       <HomeSection4 />
     </main>
-  );
+  ); 
 }
