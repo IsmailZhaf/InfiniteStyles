@@ -2,6 +2,7 @@ import React from "react";
 import cardigan from "../../../../public/bestSeller/cardigan.webp";
 import jacket from "../../../../public/bestSeller/jacket.png";
 import { Card } from "../Templates/Card";
+import Link from "next/link";
 
 export const HomeSection4 = () => {
   return (
@@ -15,7 +16,9 @@ export const HomeSection4 = () => {
               </h1>
             </div>
             <div className="w-[500px]">
-              <h3 className="text-[27px]">Tak mau ketinggalan, produk pilihan pelanggan kami yang paling diminati kini tersedia! Temukan keunggulan yang membuatnya jadi favorit, dan miliki sekarang sebelum kehabisan! <br/> #MustHave</h3>
+              <h3 className="text-[27px]">
+                Tak mau ketinggalan, produk pilihan pelanggan kami yang paling diminati kini tersedia! Temukan keunggulan yang membuatnya jadi favorit, dan miliki sekarang sebelum kehabisan! <br /> #MustHave
+              </h3>
             </div>
           </div>
         </div>
@@ -25,7 +28,9 @@ export const HomeSection4 = () => {
         </div>
       </div>
       <div className="ml-[10%]">
-        <button className="px-14 py-4 rounded-lg bg-black text-white text-[20px]">SEE MORE</button>
+        <Link href={"/BestSeller"} className="px-14 py-4 rounded-lg bg-black text-white text-[20px]">
+          SEE MORE
+        </Link>
       </div>
     </div>
   );
