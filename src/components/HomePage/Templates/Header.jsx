@@ -49,6 +49,7 @@ export const Header = () => {
           </div>
         </div>
         <div className="relative">
+          <input className="bg-[#F6F6F6] w-[200px] p-2 rounded-xl focus:outline-none" type="text" placeholder="      Search" value={inputValue} onChange={handleInputChange} />
           {inputValue === "" && (
             <div className="absolute inset-y-0 left-0 pl-2 flex items-center pointer-events-none">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -56,7 +57,6 @@ export const Header = () => {
               </svg>
             </div>
           )}
-          <input className="bg-[#F6F6F6] w-[200px] p-2 rounded-xl focus:outline-none" type="text" placeholder="      Search" value={inputValue} onChange={handleInputChange} />
         </div>
       </div>
     </div>
