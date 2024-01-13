@@ -16,7 +16,7 @@ export const BestSeller = () => {
       <div className="flex justify-center pt-[50px]">
         <h1 className="font-serif text-[80px] text-[#29218B]">Our Best Seller</h1>
       </div>
-      <div className="pt-[50px] mx-auto w-[1250px] border-red-500 grid justify-items-center grid-cols-3 gap-y-16">
+      <div className="pt-[50px] mx-auto w-[1250px] border-red-500 grid justify-items-center grid-cols-3 gap-y-12">
         <Card link={cardigan} name={"Cardigan"} price={"Rp350.000"} />
         <Card link={turtleneck} name={"Turtleneck Sweater White"} price={"Rp215.000"} />
         <Card link={gown} name={"Blue White Gown"} price={"Rp850.000"} />
@@ -44,3 +44,5 @@ export const BestSeller = () => {
     </div>
   );
 };
+
+

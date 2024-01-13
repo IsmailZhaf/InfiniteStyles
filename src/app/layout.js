@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
-import "@/styles/globals.css";
-import { Template } from "@/components/HomePage/Templates/Index";
+import "../styles/globals.css";
+import { Template } from "../../src/components/HomePage/Templates/Index";
 
 const inter = Inter({ subsets: ["latin"] });
 
