@@ -1,6 +1,7 @@
 import { HeaderSearch } from '@/components/Search/Components/Header';
 import { WomenCard } from '@/components/Women/components/WomenCard';
 import React from 'react'
+import Link from 'next/link';
 
 
 export default async function Page({params}) {
@@ -12,8 +13,10 @@ export default async function Page({params}) {
         <HeaderSearch title={`Pencarian Untuk ${keyword}...`}/>
         <div className='grid grid-cols-4 gap-y-[50px] justify-items-center mb-[100px]'>
         {Array.isArray(data) && data.length > 0 ? (
-            data.map(({ id, attachment, name, age }) => (
-                <WomenCard key={id} link={attachment} name={name} price={age} />
+            data.map(({ id, _id, attachment, name, age }) => (
+                <Link key={id} href={`/Order-form/${_id}`}>
+                    <WomenCard key={id} link={attachment} name={name} price={age}/>
+                </Link>
             ))
             ) : (
                 <p>Tidak ada hasil pencarian.</p>
