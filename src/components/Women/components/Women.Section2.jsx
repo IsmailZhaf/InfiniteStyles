@@ -1,5 +1,5 @@
-"use client"
 import React from 'react'
+import Link from 'next/link';
 import { WomenCard } from './WomenCard'
 
  async function getData() {
@@ -14,10 +14,14 @@ export const WomenSection2 = async () => {
   const {data} = await getData();
   return (
     <div className='m-auto max-w-[1300px]'>
-     <div className='grid grid-cols-4 gap-y-[50px] justify-items-center'>
-      {data.map(({id,attachment, name, age, kategori})=>{
+      <div className='grid grid-cols-4 gap-y-[50px] justify-items-center'>
+      {data.map(({id,_id, attachment, name, age, kategori})=>{
         if(kategori === "Female") {
-          return  <WomenCard key={id} link={attachment} name={name} price={age}/>
+          return (
+            <Link key={id} href={`/Order-form/${_id}`}>
+              <WomenCard key={id} link={attachment} name={name} price={age}/>
+            </Link>
+          ) 
         }
       })} 
 

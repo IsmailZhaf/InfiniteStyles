@@ -1,9 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import women from "../../../../public/women/women1.png";
 import star from "../../../../public/women/star.png";
 
-export const WomenCard = ({ link, name, price }) => {
+export const WomenCard = ({link, name, price  }) => {
   return (
     <div className="w-[250px] h-[380px] bg-black ">
       <Image src={link} width={250} height={360} alt={""} />

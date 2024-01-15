@@ -9,23 +9,33 @@ import greenBArmy from "../../../../public/bestSeller/GreenBArmy.png";
 import redJumpSuit from "../../../../public/bestSeller/redJumpSuit.jpg";
 import discount from "../../../../public/bestSeller/discountsample.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
-export const BestSeller = () => {
+async function getData() {
+  const response = await fetch("https://v1.appbackend.io/v1/rows/HPKXSTv3dGlW",{
+    cache: "no-store",
+  });
+  const data = await response.json();
+  return data;
+}
+
+export const BestSeller = async () => {
+  const {data} = await getData();
   return (
     <div className="bg-[#9CB4E0] pb-[50px]">
       <div className="flex justify-center pt-[50px]">
         <h1 className="font-serif text-[80px] text-[#29218B]">Our Best Seller</h1>
       </div>
       <div className="pt-[50px] mx-auto w-[1250px] border-red-500 grid justify-items-center grid-cols-3 gap-y-12">
-        <Card link={cardigan} name={"Cardigan"} price={"Rp350.000"} />
-        <Card link={turtleneck} name={"Turtleneck Sweater White"} price={"Rp215.000"} />
-        <Card link={gown} name={"Blue White Gown"} price={"Rp850.000"} />
-        <Card link={jacket} name={"Jacket"} price={"Rp750.000"} />
-        <Card link={sunglasses} name={"Sunglasses"} price={"Rp155.000"} />
-        <Card link={jeans} name={"Ripped Jeans Cream"} price={"Rp599.000"} />
-        <Card link={greenBArmy} name={"Cardigan"} price={"Rp199.000"} />
-        <Card link={redJumpSuit} name={"Red Jump Suit"} price={"Rp265.000"} />
-        <Card link={cardigan} name={"Cardigan"} price={"Rp350.000"} />
+      {data.map(({id,_id, attachment, name, age, producttype})=>{
+        if(producttype === "BestSeller") {
+          return (
+            <Link key={id} href={`/Order-form/${_id}`}>
+              <Card key={id} link={attachment} name={name} price={age}/>
+            </Link>
+          ) 
+        }
+      })} 
       </div>
       <div className="mt-[50px] flex bg-white m-auto w-[1300px]">
         <Image src={discount} className="w-[650px]" />
