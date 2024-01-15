@@ -23,8 +23,8 @@ export const HomeSection4 = () => {
           </div>
         </div>
         <div className="flex gap-10 mt-[180px]">
-          <Card link={cardigan} name={"Cardigan"} price={"Rp350.000"} />
-          <Card link={jacket} name={"Jacket"} price={"Rp750.000"} />
+          <Card link={cardigan} name={"Cardigan"} price={350}  />
+          <Card link={jacket} name={"Jacket"} price={750} />
         </div>
       </div>
       <div className="ml-[10%]">
