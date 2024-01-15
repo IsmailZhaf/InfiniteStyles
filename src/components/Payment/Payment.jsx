@@ -97,7 +97,7 @@ export const Payment = ({productData}) => {
         </div>
         </div>
         <div className='w-[300px] mb-5 text-[20px] text-center bg-[#218B82] p-4 rounded-2xl text-[#D6EADF]'>
-            <button onClick={handlePayment}>Pilih Pembayaran</button>
+            <button onClick={handlePayment}>Bayar</button>
         </div>
     </div>
     )
