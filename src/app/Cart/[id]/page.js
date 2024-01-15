@@ -1,6 +1,8 @@
 import React from 'react'
 // import { CartContext } from '@/context/CartContext';
 import { CartPage } from '@/components/Cart/CartPage'
+import { Header } from '@/components/HomePage/Templates/Header';
+import { Footer } from '@/components/HomePage/Templates/Footer';
 
 export default async function Page({params}) {
     const {id} = params;
@@ -9,7 +11,9 @@ export default async function Page({params}) {
     return (
         // <CartContext.Provider value={productData}>
             <div>
+                <Header/>
                 <CartPage productData={productData}/>
+                <Footer/>
             </div>
         // </CartContext.Provider>
     )

@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
-import { Template } from "../../src/components/HomePage/Templates/Index";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,10 +11,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className}`}>
-        <Template className="p-0 m-0">{children}</Template>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${inter.className}`}>
+          <div className="p-0 m-0">{children}</div>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

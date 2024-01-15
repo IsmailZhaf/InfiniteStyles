@@ -4,10 +4,19 @@ import React from "react";
 import Link from "next/link";
 import logo from "../../../../public/LOGO.png";
 import { InputSearch } from "./inputSearch";
+import { UserButton, SignInButton } from "@clerk/nextjs";
 import { useState } from "react";
 
 export const Header = () => {
-  
+  const [signIn, setSignIn] = useState(false)
+
+  const handleSignIn =() =>{
+    setSignIn(true);
+  }
+
+  const handleSignOut = () =>{
+    setSignIn(false);
+  }
 
   const menu = [
     { label: "Shop", route: "/" },
@@ -32,9 +41,10 @@ export const Header = () => {
       </div>
       <div className="pt-[50px] space-y-16 flex flex-col justify-between">
         <div className="flex gap-5">
-          <button className="border-[2px] border-black px-5 rounded text-[10] font-semibold">
-            <Link href={"/Login"}>LOGIN</Link>
-          </button>
+            <UserButton afterSignOutUrl="/" onClick={handleSignOut}/>
+            <button className="border-[2px] border-black px-5 rounded text-[10] font-semibold" onClick={handleSignIn}>
+              <SignInButton afterSignInUrl="/"/>
+              </button>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
               <path

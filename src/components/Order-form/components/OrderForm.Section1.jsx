@@ -3,17 +3,12 @@ import React from 'react'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { useCart } from '@/context/CartContext2'
 import star from "../../../../public/star_icon.png"
 
 export const OrderFormSection1 = ({productData}) => {
     const router = useRouter();
     const {_id,attachment,name, age, deskripsi, kategori_0, stock } = productData;
-    const { dispatch } = useCart();
 
-    const addToCart = () => {
-        dispatch({ type: 'ADD_TO_CART', payload: productData });
-    };      
 
     const handleAddToCart=(e)=>{
         e.preventDefault();
@@ -63,7 +58,7 @@ export const OrderFormSection1 = ({productData}) => {
                 </div>
                 </div>
             </div>
-            <button className='border-2 border-solid border-[#218B81] text-[#218B81] text-[25px] w-[250px] rounded-lg' onClick={addToCart}>+ Keranjang</button>
+            <button className='border-2 border-solid border-[#218B81] text-[#218B81] text-[25px] w-[250px] rounded-lg' >+ Keranjang</button>
             <button className='border-2 border-solid bg-[#218B81] text-white text-[25px] w-[250px] rounded-lg' onClick={handleAddToCart}>Langsung Beli</button>
             </form>
         </div>

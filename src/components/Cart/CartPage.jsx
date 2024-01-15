@@ -2,15 +2,12 @@
 import React from 'react'
 import Image from 'next/image'
 import { useState } from 'react'
-import { useCart } from '@/context/CartContext2'
 import atm from "../../../public/atm.jpeg"
 import qris from "../../../public/qris.png"
 import { useRouter } from 'next/navigation'
 
 export const CartPage = ({productData}) => {
     const router = useRouter();
-    const cart = useCart();
-    console.log(cart);
     const {attachment, name, age, _id} = productData;
     const [quantity, setQuantity] = useState(1);
     const [dataToSend, setDataToSend] = useState(1);

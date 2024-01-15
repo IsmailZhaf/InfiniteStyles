@@ -2,6 +2,8 @@ import { HeaderSearch } from '@/components/Search/Components/Header';
 import { WomenCard } from '@/components/Women/components/WomenCard';
 import React from 'react'
 import Link from 'next/link';
+import { Header } from '@/components/HomePage/Templates/Header';
+import { Footer } from '@/components/HomePage/Templates/Footer';
 
 
 export default async function Page({params}) {
@@ -10,6 +12,7 @@ export default async function Page({params}) {
     const {data} = await response.json(); 
     return (
     <div>
+        <Header/>
         <HeaderSearch title={`Pencarian Untuk ${keyword}...`}/>
         <div className='grid grid-cols-4 gap-y-[50px] justify-items-center mb-[100px]'>
         {Array.isArray(data) && data.length > 0 ? (
@@ -22,6 +25,7 @@ export default async function Page({params}) {
                 <p>Tidak ada hasil pencarian.</p>
             )}
         </div>
+        <Footer/>
     </div>
 
     )

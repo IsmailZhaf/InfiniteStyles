@@ -3,7 +3,6 @@ import React from 'react'
 import Image from 'next/image'
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { useCart } from '@/context/CartContext';
 
 export const Payment = ({productData}) => {
     const router = useRouter();
