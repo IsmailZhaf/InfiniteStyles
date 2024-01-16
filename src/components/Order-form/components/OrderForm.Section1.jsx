@@ -44,22 +44,19 @@ export const OrderFormSection1 = ({productData}) => {
             </div>
         </div>
         <div className='border-4 w-[30%]  border-solid border-[#99D9DB] rounded-lg p-1'>
-            <form className='flex flex-col  items-center space-y-2'>
-            <label htmlFor="quantity" className='font-bold text-[20px]'>Atur Jumlah Pesanan</label>
+            <form className='flex flex-col items-center space-y-2'>
+            <label htmlFor="quantity" className='font-bold text-[20px]'>Pesanan</label>
             <div className='flex items-start gap-2'>
                 <Image src={attachment} width={150} height={200} className='rounded-lg w-[150px] h-[160px]'/>
-                <div>
-                <div className='flex flex-col gap-14 w-[100px]'>
+                <div className='flex flex-col gap-24 w-[100px]'>
                     <h1>Stok sisa : </h1>
                     <div>
                         <h1>Subtotal : </h1>
                         <h1><b>Rp{age}.000</b></h1>
                     </div>
                 </div>
-                </div>
             </div>
-            <button className='border-2 border-solid border-[#218B81] text-[#218B81] text-[25px] w-[250px] rounded-lg' >+ Keranjang</button>
-            <button className='border-2 border-solid bg-[#218B81] text-white text-[25px] w-[250px] rounded-lg' onClick={handleAddToCart}>Langsung Beli</button>
+            <button className='border-2 border-solid bg-[#218B81] text-white text-[30px] w-[250px] rounded-lg' onClick={handleAddToCart}>Langsung Beli</button>
             </form>
         </div>
     </div>

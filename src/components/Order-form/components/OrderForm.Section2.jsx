@@ -35,8 +35,8 @@ export const OrderFormSection2 = ({productData}) => {
                     <div className='flex gap-1'>
                         <Image src={star} className=''/>
                         <h1>4,8</h1>
-                        <h1>999++ rating -</h1>
-                        <h1>999++ ulasan</h1>
+                        <h1>99++ rating -</h1>
+                        <h1>99++ ulasan</h1>
                     </div>
                     <div className='flex relative items-center bg-[#81B6B8] h-[150px] rounded-xl p-1 space-x-1'>
                         <Image src={attachment} width={100} height={120} className='h-[120px] rounded-xl'/>
@@ -45,7 +45,7 @@ export const OrderFormSection2 = ({productData}) => {
                         <Image src={attachment} width={100} height={120} className='h-[120px] rounded-xl'/>
                         <Image src={attachment} width={100} height={120} className='h-[120px] rounded-xl'/>
                         <Image src={attachment} width={100} height={120} className='h-[120px] rounded-xl'/>
-                        <div className='absolute p-2 w-[100px] h-[130px] bg-[#81B6B8]/50 right-1'>Tampilkan 999+ ulasan lainnya</div>
+                        <div className='absolute p-2 w-[100px] h-[130px] bg-[#81B6B8]/50 right-1'>99+ ulasan lainnya</div>
                     </div>
                 </div>
                 <div className='bg-[#81B6B8] rounded-xl w-[50%] p-3'>

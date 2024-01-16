@@ -80,7 +80,7 @@ export const Payment = ({productData}) => {
                     <h1 className='font-bold text-[20px]'>Rp{age}.000</h1>
                 </div>
                 <div className='flex justify-between w-[470px]'>
-                    <h1 className='text-left'>Total Ongokos Kirim</h1>
+                    <h1 className='text-left'>Total Ongkos Kirim</h1>
                     <h className='font-bold text-[20px]'>Rp{ongkir}.000</h>
                 </div>
                 <div className='flex justify-between w-[470px]'>
