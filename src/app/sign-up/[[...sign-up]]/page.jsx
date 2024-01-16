@@ -1,6 +1,6 @@
 import { SignUp } from "@clerk/nextjs";
 import Image from "next/image";
-import img from "../../../../../public/women/3.jpeg"
+import img from "../../../../public/women/3.jpeg"
 
 import React from 'react'
 
